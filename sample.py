@@ -143,7 +143,8 @@ def main():
         key = cv.waitKey(1)
         if key == 27:  # ESC
             break
-    cap.release()
+    if filepath is None:
+        cap.release()
     cv.destroyAllWindows()
 
 
