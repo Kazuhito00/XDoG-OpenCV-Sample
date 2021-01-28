@@ -22,6 +22,7 @@ XDoGのパラメータは各トラックバーを変更することで調整可�
 ```bash
 python sample.py
 ```
+<img src="https://user-images.githubusercontent.com/37477845/106143007-87305a80-61b5-11eb-9366-5a97fb34b461.gif" width="80%">
 
 # Author
 高橋かずひと(https://twitter.com/KzhtTkhs)
