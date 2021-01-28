@@ -29,7 +29,7 @@ python sample.py
 高橋かずひと(https://twitter.com/KzhtTkhs)
  
 # License 
-color-equalize-hist-sample is under [MIT License](LICENSE).
+color-equalize-hist-sample is under [MIT License](LICENSE).<bR>
 [Dovyski/cvui](https://github.com/Dovyski/cvui) is under [MIT License](LICENSE).
 
 また、サンプルの画像は[フリー素材ぱくたそ](https://www.pakutaso.com)様の写真を利用しています。
