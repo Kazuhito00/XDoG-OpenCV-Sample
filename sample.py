@@ -20,6 +20,8 @@ def get_args():
     parser.add_argument("--width", help='cap width', type=int, default=960)
     parser.add_argument("--height", help='cap height', type=int, default=540)
 
+    parser.add_argument("--file", type=str, default=None)
+
     args = parser.parse_args()
 
     return args
@@ -90,9 +92,12 @@ def main():
     cap_width = args.width
     cap_height = args.height
 
-    cap = cv.VideoCapture(device)
-    cap.set(cv.CAP_PROP_FRAME_WIDTH, cap_width)
-    cap.set(cv.CAP_PROP_FRAME_HEIGHT, cap_height)
+    filepath = args.file
+
+    if filepath is None:
+        cap = cv.VideoCapture(device)
+        cap.set(cv.CAP_PROP_FRAME_WIDTH, cap_width)
+        cap.set(cv.CAP_PROP_FRAME_HEIGHT, cap_height)
 
     cvui.init(WINDOW_NAME)
 
@@ -104,10 +109,12 @@ def main():
     gamma = [9.8]
 
     while True:
-        ret, frame = cap.read()
-        if not ret:
-            continue
-        # frame = cv.imread('14d4e527a817fbb50637f01222936346.jpg')
+        if filepath is None:
+            ret, frame = cap.read()
+            if not ret:
+                continue
+        else:
+            frame = cv.imread(filepath)
         original_frame = copy.deepcopy(frame)
 
         gray_image = cv.cvtColor(original_frame, cv.COLOR_BGR2GRAY)
