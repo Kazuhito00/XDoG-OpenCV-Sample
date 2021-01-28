@@ -12,6 +12,7 @@ XDoG(Extended Difference of Gaussians)アルゴリズムを用いた線画抽出
 python XDoG.py
 ```
 
+# Demo(Web Camera & GUI)
 また、Webカメラを用いたデモの実行方法は以下です。<br>
 デモ実行時には、以下のオプションが指定可能です。<br>
 XDoGのパラメータは各トラックバーを変更することで調整可能です。
